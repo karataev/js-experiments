@@ -25,7 +25,8 @@
 
     <ol>
         <li ng-repeat="item in main.items">
-            <h4><a ng-href="http://karataev.github.io/js-experiments/{{item.url}}">{{item.title}}</a></h4>
+            <h4 ng-if="item.url"><a ng-href="http://karataev.github.io/js-experiments/{{item.url}}">{{item.title}}</a></h4>
+            <h4 ng-if="item.urlFull"><a ng-href="{{item.urlFull}}">{{item.title}}</a></h4>
             <p>{{item.desc}}</p>
             <hr/>
         </li>
@@ -42,7 +43,8 @@
         main.items = [
             {title:"Hoisting", url:"hoisting", desc:"A very basic example of hoisting in JS"},
             {title:"Be careful when adding floats", url:"float-numbers", desc:"0.1 + 0.2 = 0.30000000000000004"},
-            {title:"A very nice example of hoisting", url:"hoisting2", desc:"JS rocks!"}
+            {title:"A very nice example of hoisting", url:"hoisting2", desc:"JS rocks!"},
+            {title:"Use the power of functions's LexicalEnvironment", urlFull:"http://plnkr.co/edit/FiJ4k1J5INUYKrRQgmRz?p=preview", desc:"Independent counters"}
         ]
     })
 
