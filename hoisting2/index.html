@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS rocks!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/default.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+</head>
+
+
+<body>
+
+<h1>Result of alert?</h1>
+
+<pre>
+<code>    var a = 12;
+    function b() {
+      if (!a) {
+        var a = 9;
+      }
+      alert( a );
+    }
+    b();
+</code>
+</pre>
+
+<button class="btn btn-primary">Check yourself</button>
+
+<script>
+
+    function testCode() {
+        var a = 12;
+        function b() {
+            if (!a) {
+                var a = 9;
+            }
+            alert( a );
+        }
+        b();
+    }
+
+    $(document).ready(function () {
+        var bt = $('.btn');
+        bt.on('click', testCode)
+    })
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
